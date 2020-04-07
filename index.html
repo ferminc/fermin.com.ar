@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Fermin's Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Heebo:400,700" rel="stylesheet">
+
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="description" content="Fermin Coronel's personal website">
+	<meta name="theme-color" content="#000000">
+	
+	<meta property="og:url" content="https://fermin.io" />
+	<meta property="og:title" content="Fermin's portfolio" />
+	<meta property="og:description" content="Fermin Coronel's personal website" />
+	<meta property="og:site_name" content="fermin.io" />
+	<!-- <meta property="og:image" content="http://www.example.com/image.jpg" /> -->
+	<meta property="og:type" content="website" /> 
+	<meta property="og:locale" content="en_US" /> 
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@fermincoronel">
+	<meta name="twitter:creator" content="@fermincoronel">
+</head>
+<body>
+	<button class="button" id="js-night">Night mode</button>
+	<section class="container" id="js-bg">
+		<section class="card">
+			<h1 class="name">
+				Fermin Coronel
+			</h1>
+			<hr>
+			<h4 class="contact">Contact: <a href="mailto:ferc@outlook.com" class="link">ferc@outlook.com</a> </h4>
+		</section>
+	</section>
+</body>
+
+<script type="text/javascript">
+
+	var button = document.getElementById("js-night");
+	var backg = document.getElementById("js-bg");
+	var card = document.getElementsByClassName("card");
+	var title = document.getElementsByClassName("title");
+	var link = document.getElementsByClassName("link");
+
+	button.addEventListener("click", function () {
+		this.blur();
+		if (backg.classList.contains("container-night")) {
+			backg.classList.remove("container-night");
+            card[0].classList.remove("card-night");
+            title[0].classList.remove("title-night");
+            link[0].classList.remove("link-night");
+            link[1].classList.remove("link-night");
+        }
+        else {
+            backg.classList.add("container-night");
+            card[0].classList.add("card-night");
+            title[0].classList.add("title-night");
+            link[0].classList.add("link-night");
+            link[1].classList.add("link-night");
+        }
+	});
+</script>
+</html>
