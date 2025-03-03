@@ -6,7 +6,7 @@
 
 body {
     width: 100vw;
-    min-height: 100vh;
+    min-height: 100svh;
     line-height: 1.5;
     background: #9AAEBC;
     background: linear-gradient(135deg, #00A86B, #0072A9, #00A86B, #CC830E, #0072A9);
